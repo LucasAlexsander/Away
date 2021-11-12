@@ -75,6 +75,9 @@ header {
     text-decoration: none;
     font-size: 11px;
 }
+.button:hover {
+    color: #333;
+}
 
 /*Banner*/
 .banner {
@@ -295,4 +298,108 @@ header {
 .section--projects--filters li:hover,
 .section--projects--filters li.active {
     border-bottom: 3px solid #b28726;
+}
+
+.section--projects--photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex; /*Usado para deixar um do lado do outro*/
+    flex-wrap: wrap; /*Caso não de na coluna ele pula para a linha de baixo*/
+    justify-content: center; /*Centralizar o conteudo*/   
+}
+.section--projects--photo {
+    width: 280px;
+}
+.section--projects--photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section--projects--photoarea img {
+    width: inherit;/* inherit Herdar o dado do pai*/
+    height: inherit;
+}
+.section--projects--photoinfo {
+    position: absolute;/*Deixa ele em cima da foto, pois no HTML ele está*/
+    background: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.section--projects--photoinfo h5 {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.section--projects--photoinfo p {
+    text-align: center;
+}
+.section--projects--photoarea:hover .section--projects--photoinfo { /*vamos aplicar o :hover no próximo item*/
+    display: flex;
+}
+
+
+
+.section--team {
+    overflow: hidden; /*Remover a área desperdiçada*/
+    max-width: 880px;
+    margin: auto; /*Ajuda a alinhar*/
+}
+.section--team--area {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.bg-team {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    padding: 0px;
+}
+.section--team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+.section--team .slide {
+    width: 280px;
+    height: 100%;
+    display: inline-block; 
+    background-color: white;
+    margin-right: 20px;
+    min-height: 300px;
+}
+.section--team .slide--area {
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+.section--team--area .sliders--pointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.section--team--area .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28726;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer; 
+}
+.section--team--area .pointer:hover,
+.section--team--area .active {
+    background-color: #b28726;
 }
